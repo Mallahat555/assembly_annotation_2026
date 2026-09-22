@@ -1,0 +1,8 @@
+*.fastq
+*.fastq.gz
+*.bam
+*.sam
+*.jf
+*.histo
+
+
