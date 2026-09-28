@@ -4,5 +4,14 @@
 *.sam
 *.jf
 *.histo
-
-
+*.fasta
+*.fasta.fai
+*.bam.bai
+*.stderr
+*.gv
+*.gfa
+flye
+hifiasm
+LJA
+trinity
+input

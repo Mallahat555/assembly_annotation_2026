@@ -13,7 +13,7 @@ Raw data are coming from these 2 publications:
             evolutionary dynamics. Nature Communications. 2020;11:1–10. 
             Available from: http://dx.doi.org/10.1038/s41467-020-14779-y
 
-All input reads can be found here:
+All input reads can be found on IBU cluster of University of Bern here:
     /data/courses/assembly-annotation-course/raw_data
 
 Whole genome PacBio HiFi reads for accession for user apiatkowska is:
@@ -56,3 +56,27 @@ Lest start the analysys:
                         
     4. Run kmer counting
         sbatch 04_run_kmer_counting.sh
+    
+    5. Assemblies:
+
+        5.1 Whole genome assably using flye: 
+                For flye documentation: https://github.com/mikolmogorov/Flye/blob/flye/docs/USAGE.md
+                sbatch 05_run_assambly_flye_PacBio.sh
+
+        5.2 Whole genome assably using hifiasm:
+                For hifiasm documentation: https://github.com/chhylp123/hifiasm
+                sbatch 06_run_assambly_hifiasm_PacBio.sh
+
+                # Convert GFA to FASTA in terminal
+                go to the folder where your gfa file with is with cd and run:
+                awk '/^S/{print ">"$2;print $3}' hifiasm_Pa1.bp.p_ctg.gfa > hifiasm_Pa1.bp.p_ctg.fa
+
+        5.3 Whole genome assably using LJA:
+                For LJA documentation: https://github.com/AntonBankevich/LJA/blob/main/docs/lja_manual.md
+                sbatch 07_run_assambly_LJA_PacBio.sh
+
+        5.4 Whole TRANSCRIPTOME assably using Trinity
+                For trinity documentation: https://github.com/trinityrnaseq/trinityrnaseq/wiki
+                sbatch 08_run_assambly_Trinity_Illumina.sh
+
+    6. 
