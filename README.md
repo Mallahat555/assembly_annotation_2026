@@ -41,6 +41,8 @@ Whole transcriptome Illumina RNAseq for accession RNAseq_Sha for all users:
 To get a list of all available software/versions type module avail
 To load a specific module (e.g. FastQC) type module load FastQC/0.11.9-Java-11
 
+To test scripts run them on partition #SBATCH --partition=pshort_el8
+
 Lest start the analysys:
     1. Create soft links to Pa-1 and RNA_seq RNAseq_Sha directories:
 
@@ -63,7 +65,7 @@ Lest start the analysys:
     
     5. Assemblies:
 
-        5.1 Whole genome assably using flye: 
+        5.1 Whole genome assably using flye v_2.9.5. : 
                 For flye documentation: https://github.com/mikolmogorov/Flye/blob/flye/docs/USAGE.md
                 sbatch 05_run_assambly_flye_PacBio.sh
 
@@ -83,4 +85,45 @@ Lest start the analysys:
                 For trinity documentation: https://github.com/trinityrnaseq/trinityrnaseq/wiki
                 sbatch 08_run_assambly_Trinity_Illumina.sh
 
-    6. 
+    6. Quality Control of Assemblies 
+    
+        6.1 with Busco v_5.7.1. :
+            For Busco documentation go: https://busco.ezlab.org/busco_userguide.html#running-busco
+
+            6.1.1 Run Busco with Flye
+                    sbatch 09_run_BUSCO_evaluation_on_Flye.sh
+
+            6.1.2 Run Busco with hifiasm
+                    sbatch 10_run_BUSCO_evaluation_on_Hifiasm.sh
+
+            6.1.3 Run Busco with LJA
+                    sbatch 11_run_BUSCO_evaluation_on_LJA.sh
+
+            6.1.4 Run Busco with Trinity
+                    sbatch 12_run_BUSCO_evaluation_on_Trinity.sh
+    
+        6.2 with Quast v_5.2.0. (with and without the reference):
+            For Quast documentation go: https://quast.sourceforge.net/docs/manual.html#sec2
+
+            6.2.1 Run Busco with Flye
+                    sbatch
+
+            6.2.2 Run Busco with hifiasm
+                    sbatch
+
+            6.2.3 Run Busco with LJA
+                    sbatch
+
+            6.2.4 Run Busco with Trinity
+                    sbatch
+
+        6.3 with MERQURY v_1.3. :
+
+
+#TODO Plot BUSCO RESULTS https://busco.ezlab.org/busco_userguide.html#plotting-the-results
+
+
+
+/data/users/apiatkowska/assembly_annotation_course/assemblies_evaluation/Merqury/flye/flye_merqury.assembly.spectra-cn.fl.png
+[text](assemblies_evaluation/Merqury/flye/flye_merqury.qv)
+[text](assemblies_evaluation/Merqury/flye/flye_merqury.completeness.stats)
