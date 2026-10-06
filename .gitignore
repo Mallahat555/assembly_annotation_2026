@@ -17,3 +17,5 @@ trinity
 input
 assemblies_evaluation
 read_QC
+nucmer
+mummerplot
