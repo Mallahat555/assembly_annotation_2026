@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#SBATCH --time=1:00:00
+#SBATCH --time=2:00:00
 #SBATCH --mem=8G
 #SBATCH --cpus-per-task=8
 #SBATCH --job-name=mummerplot_Flye_vs_Hifiasm_vs_LJA
