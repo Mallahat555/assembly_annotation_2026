@@ -38,10 +38,12 @@ Whole transcriptome Illumina RNAseq for accession RNAseq_Sha for all users:
                          ERR754081_1.fastq.gz
                          ERR754081_2.fastq.gz
 
-To get a list of all available software/versions type module avail
-To load a specific module (e.g. FastQC) type module load FastQC/0.11.9-Java-11
+To get a list of all available software/versions type: module avail
+To load a specific module (e.g. FastQC) type: module load FastQC/0.11.9-Java-11
 
 To test scripts run them on partition #SBATCH --partition=pshort_el8
+Some scripts were fragmented to smaller subscripts e.g points 7 as partituion pibu_el8 was too occupy.
+Smaller jobs were run on partition pshort_el8 for efficiency.
 
 Lest start the analysys:
     1. Create soft links to Pa-1 and RNA_seq RNAseq_Sha directories:
