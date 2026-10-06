@@ -105,25 +105,45 @@ Lest start the analysys:
         6.2 with Quast v_5.2.0. (with and without the reference):
             For Quast documentation go: https://quast.sourceforge.net/docs/manual.html#sec2
 
-            6.2.1 Run Busco with Flye
-                    sbatch
+            6.2.1 Run Quast with Flye
+                    sbatch 13_run_QUAST_evaluation_on_Flye.sh
 
-            6.2.2 Run Busco with hifiasm
-                    sbatch
+            6.2.2 Run Quast with hifiasm
+                    sbatch 14_run_QUAST_evaluation_on_Hifiasm.sh
 
-            6.2.3 Run Busco with LJA
-                    sbatch
-
-            6.2.4 Run Busco with Trinity
-                    sbatch
-
-        6.3 with MERQURY v_1.3. :
+            6.2.3 Run Quast with LJA
+                    sbatch 15_run_QUAST_evaluation_on_LJA.sh
 
 
-#TODO Plot BUSCO RESULTS https://busco.ezlab.org/busco_userguide.html#plotting-the-results
+        6.3 with MERQURY v_1.3. for Flye, Hifiasm and LJA :
+            For MERQURY documentation go: https://github.com/marbl/merqury
+
+                sbatch 16_run_MERQURY_evaluation_on_Flye_Hifiasm_LJA.sh
+        
+    7. Comparing Genomes with nucmer and mummer v_2.1:
+        For documentation go to: https://mummer4.github.io/manual/manual.html
+        
+        7.1 Prepare nucmer delta files with reference genome for:
+            7.1.1 Flye
+                sbatch 17_run_nucmer_Flye.sh
+            7.1.2 Hifiasm
+                sbatch 18_run_nucmer_Hifiasm.sh
+            7.1.3 LJA
+                sbatch 19_run_nucmer_LJA.sh
+
+        7.2 Prepare mummerplots for reference genome vs:
+           7.2.1 Flye
+                sbatch 20_run_mummer_Flye.sh
+
+           7.2.2 Hifiasm
+                sbatch 21_run_mummer_Hifiasm.sh
+
+           7.2.3 LJA
+                sbatch 22_run_mummer_LJA.sh
+        
+        7.3 Prepare comparisons Flye vs Hihiasn, Flye vs LJA, Hifiasm vs LJA:
+                sbatch 23_run_nucmer_mummer_Flye_vs_Hifiasm_vs_LJA.sh
+
+        
 
 
-
-/data/users/apiatkowska/assembly_annotation_course/assemblies_evaluation/Merqury/flye/flye_merqury.assembly.spectra-cn.fl.png
-[text](assemblies_evaluation/Merqury/flye/flye_merqury.qv)
-[text](assemblies_evaluation/Merqury/flye/flye_merqury.completeness.stats)
